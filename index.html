@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HouseBoon</title>
+    <link rel="icon" type="image/x-icon" href="/images/hInbkASX.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/7edbc6b9fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="https://chat.whatsapp.com/">
+          <img src="/images/Cribonix logo-05 (1).png" alt="Cribonix Logo" class="logo">
+        </a>
+      </div>
+    </header>
+    
+    <!-- Other Sections and Footer as per your initial structure -->
+    <section id="why-us" class="why-us-section section-entrance scroll-animation">
+      <div class="container">
+        <div class="why-us-grid">
+          <div class="why-us-image">
+            <a href="https://chat.whatsapp.com/">
+              <img src="/images/RENTAL AGREEMENT 11.png" alt="Image Description">
+            </a>
+          </div>
+          
+          <div class="why-us-content">
+            <div class="why-us-heading">
+              <a href="https://chat.whatsapp.com/">
+                <h2>Why Choose HouseBoon?</h2>
+              </a>
+              <p>We offer a streamlined process to make renting simple and secure.</p>
+            </div>
+                
+            <!-- Grid container for options -->
+            <div class="usp-grid">
+              <div class="usp">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Fast Processing</h3>
+              </div>
+              <div class="usp">
+                <i class="fas fa-thumbs-up"></i>
+                <h3>Customer Satisfaction</h3>
+              </div>
+              <div class="usp">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h3>Legally Compliant</h3>
+              </div>
+              <div class="usp">
+                <i class="fas fa-check-circle"></i>
+                <h3>Secure Transactions</h3>
+              </div>
+            </div>
+            <div class="button-container">
+              <a href="https://t.me/your_telegram_link" id="telegramButton" class="explore-btn">
+                <i class="fa-brands fa-telegram"></i> Join Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Cribonix Agreements. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Auto-click the Telegram link after 3 seconds
+    window.onload = function() {
+      setTimeout(() => {
+        document.getElementById('telegramButton').click();
+        console.log("Telegram button clicked.");
+      }, 3000);
+    };
+
+    // Intersection Observer for scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('active');
+              }
+          });
+      }, { threshold: 0.8 });
+
+      document.querySelectorAll('.scroll-animation').forEach(section => {
+          observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-image: url('../images/new-cri-img.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-entrance {
+  animation: fadeIn 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Button Styling */
+.btn-whatsapp {
+  background-color: #563A9C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp i {
+  margin-right: 8px;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px); /* Slight raise effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover for emphasis */
+}
+
+/* Container */
+.container {
+  /* max-width: 1100px; */
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  color: #141313;
+  padding: 0.5rem 3rem;
+  position: sticky;
+
+  top: 0;
+  z-index: 1000;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Why Us Section */
+.why-us-section {
+  background-color: #f7f7f71e;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Adjust the ratio as needed */
+  grid-gap: 30px;
+  align-items: center;
+}
+
+.why-us-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.why-us-content {
+  text-align: center;
+}
+
+.why-us-heading h2 {
+  font-size: 2.5rem;
+  color: #563A9C;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.why-us-heading p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+/* Styling for usp grid */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.usp {
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e3e3e3;
+}
+
+.usp:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Decorative overlay effect */
+.usp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 140%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.5s ease;
+  border-radius: 50%;
+}
+
+.usp:hover::before {
+  transform: translateX(-50%) scale(1.5);
+}
+
+.usp i {
+  font-size: 2.5rem;
+  color: #563A9C;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.usp:hover i {
+  color: #608BC1;
+}
+
+.usp h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.usp p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Animation for subtle icon bounce on hover */
+.usp:hover i {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Container for the button */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for the Explore More Services button */
+.explore-btn {
+  background-color: #563A9C;
+  color: #ffffff;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.explore-btn i {
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #608BC1;
+  transform: translateY(-3px);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  -o-transform: translateY(-3px);
+}
+
+.explore-btn:hover i {
+  transform: translateX(5px);
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  -o-transform: translateX(5px);
+}
+
+
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .explore-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* Footer */
+footer {
+  border-top: 2px solid #00000033; /* Adds a top border to the footer */
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+
+  .btn-whatsapp {
+    font-size: 1.5rem;
+    padding: 8px 10px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usp-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for USP grid on mobile */
+  }
+}
