@@ -221,8 +221,8 @@ header .header-content {
 .explore-btn {
   background-color: #563A9C;
   color: #ffffff;
-  padding: 12px 30px;
-  font-size: 1.2rem;
+  padding: 16px 40px; /* Increased padding for a larger button */
+  font-size: 1.5rem; /* Increased font size */
   font-weight: bold;
   border: none;
   border-radius: 8px;
@@ -260,7 +260,7 @@ header .header-content {
 /* Responsive adjustment */
 @media (max-width: 768px) {
   .explore-btn {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 10px 25px;
   }
 }
@@ -293,7 +293,15 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .usp{
+    padding: 10px;
+  }
+  .usp p{
+    font-size: 12px;
+  }
+  
   .usp-grid {
     grid-template-columns: 1fr 1fr; /* Two columns for USP grid on mobile */
+
   }
 }
